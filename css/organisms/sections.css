@@ -1,0 +1,195 @@
+/* ==========================================================
+   ORGANISMO: secciones de la variante dinámica
+   ========================================================== */
+
+/* Franja de tipos de cristal en movimiento */
+.strip {
+  background: var(--c-primary);
+  color: #ffffff;
+}
+
+.strip__dot {
+  color: var(--c-accent);
+}
+
+/* Cabecera de sección en dos columnas */
+.section__head--row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  max-width: none;
+}
+
+.section__head--row h2 {
+  max-width: 600px;
+}
+
+.section__head--row p {
+  max-width: 360px;
+}
+
+/* Tarjetas de servicio de color */
+.card--blue {
+  background: var(--c-primary);
+  color: #ffffff;
+}
+
+.card--blue .card__text {
+  color: #DEEBFF;
+}
+
+.card--coral {
+  background: #FFE2DD;
+}
+
+.card--sky {
+  background: var(--c-sky);
+}
+
+.card--color {
+  padding: 14px;
+}
+
+.card--color .card__media {
+  height: 180px;
+  border-radius: 14px;
+}
+
+.card--color .card__body {
+  padding: 18px 12px 14px;
+}
+
+.card--color h3 {
+  font-size: 1.6rem;
+}
+
+.chip {
+  align-self: flex-start;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.chip--white { background: #ffffff; color: var(--c-primary); }
+.chip--ink { background: var(--c-ink); color: #ffffff; }
+.chip--blue { background: var(--c-primary); color: #ffffff; }
+.chip--coral { background: #FFE2DD; color: var(--c-ink); }
+.chip--soft { background: var(--c-sky); color: var(--c-primary-dark); }
+
+/* Banda de cifras con contador */
+.stats {
+  padding: 56px 0;
+  background: var(--c-sky);
+  text-align: center;
+}
+
+.stats .grid {
+  --grid-min: 180px;
+}
+
+.stats .stat__value {
+  font-size: 3.2rem;
+  color: var(--c-primary);
+}
+
+/* Misión */
+.mission__content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.mission__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mission__stage {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--c-primary);
+}
+
+.mission__stage::before {
+  content: "";
+  position: absolute;
+  left: -60px;
+  bottom: -60px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: var(--c-accent);
+}
+
+.mission__photo {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 20px;
+  transform: rotate(-2deg);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3);
+}
+
+.mission__glass {
+  left: 62%;
+  top: 58%;
+  width: 30%;
+  height: 34%;
+}
+
+/* Ubicación sobre fondo oscuro */
+.location {
+  overflow: hidden; /* el mapa inclinado no debe generar scroll lateral */
+  background: var(--c-ink);
+  color: #ffffff;
+}
+
+.location__info {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.location .info__label {
+  color: #ffffff;
+}
+
+.location .info__value,
+.location .info__value a {
+  color: #DEEBFF;
+}
+
+.location__info .btn {
+  align-self: flex-start;
+}
+
+.location .map {
+  transform: rotate(1.5deg);
+}
+
+/* Llamada a la acción en coral */
+.cta {
+  padding: 80px 0;
+  background: var(--c-accent);
+  color: var(--c-ink);
+}
+
+.cta__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.cta h2 {
+  max-width: 680px;
+}

@@ -1,0 +1,64 @@
+/* ==========================================================
+   ÁTOMO: tokens de diseño — Paleta C · variante dinámica
+   Cambiar aquí colores, fuentes o radios afecta a toda la web.
+   ========================================================== */
+
+:root {
+  /* Colores de marca */
+  --c-ink: #172B4D;          /* Noche: textos y fondos oscuros */
+  --c-ink-soft: #253858;
+  --c-primary: #0C66E4;      /* Azul vivo: botones y acentos */
+  --c-primary-dark: #0055CC;
+  --c-accent: #F87462;       /* Coral: detalles puntuales */
+  --c-sky: #E9F2FF;          /* Cielo: fondos suaves */
+
+  /* Colores funcionales */
+  --c-text: var(--c-ink);
+  --c-muted: #44546F;
+  --c-bg: #ffffff;
+  --c-surface: #F7F8F9;
+  --c-line: #DFE1E6;
+  --c-eyebrow: var(--c-primary-dark);
+  --c-on-primary: #ffffff;
+  --c-on-accent: var(--c-ink);
+  --c-focus: #388BFF;
+
+  /* Tipografía */
+  --font-head: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --head-weight: 800;
+  --brand-weight: 800;
+  --h1-size: 3.65rem;
+  --h2-size: 2.75rem;
+  --eyebrow-tracking: 0.1em;
+
+  /* Espaciado y formas */
+  --section-space: 96px;
+  --btn-radius: 999px;
+  --btn-weight: 700;
+  --btn-tracking: 0;
+  --card-radius: 22px;
+  --card-border: 0;
+  --card-bg: #ffffff;
+  --map-radius: 28px;
+
+  /* Cabecera */
+  --header-bg: var(--c-ink);
+  --header-fg: #ffffff;
+  --header-border: 0;
+
+  /* Pie */
+  --footer-bg: #091E42;
+  --footer-fg: #C1C7D0;
+  --footer-muted: #A5ADBA;
+  --footer-line: #344563;
+  --footer-title-size: 0.95rem;
+  --footer-title-tracking: 0;
+  --footer-title-transform: none;
+
+  /* Redes sociales */
+  --social-radius: 14px;
+  --social-bg: var(--c-primary);
+  --social-bg-hover: var(--c-primary-dark);
+  --social-border: 0;
+}

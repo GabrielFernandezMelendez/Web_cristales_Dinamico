@@ -1,0 +1,85 @@
+/* ==========================================================
+   ÁTOMO: botones
+   .btn + modificador de color. Radio y peso salen de tokens.
+   ========================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 26px;
+  border: 1px solid transparent;
+  border-radius: var(--btn-radius);
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: var(--btn-weight);
+  letter-spacing: var(--btn-tracking);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn--primary {
+  background: var(--c-primary);
+  color: var(--c-on-primary);
+}
+
+.btn--primary:hover {
+  background: var(--c-primary-dark);
+  color: var(--c-on-primary);
+}
+
+.btn--dark {
+  background: var(--c-ink);
+  color: #ffffff;
+}
+
+.btn--dark:hover {
+  background: var(--c-ink-soft);
+  color: #ffffff;
+}
+
+.btn--light {
+  background: #ffffff;
+  color: var(--c-ink);
+}
+
+.btn--light:hover {
+  background: var(--c-surface);
+  color: var(--c-ink);
+}
+
+.btn--accent {
+  background: var(--c-accent);
+  color: var(--c-on-accent);
+}
+
+.btn--accent:hover {
+  filter: brightness(1.05);
+  color: var(--c-on-accent);
+}
+
+.btn--outline {
+  background: transparent;
+  color: currentColor;
+  border-color: currentColor;
+}
+
+.btn--link {
+  padding: 0 4px;
+  border-radius: 0;
+  border-bottom: 1px solid currentColor;
+  color: var(--c-ink);
+}
+
+.btn--sm {
+  min-height: 44px;
+  padding: 0 20px;
+  font-size: 0.92rem;
+}

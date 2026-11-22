@@ -1,0 +1,18 @@
+/* ==========================================================
+   Hoja principal — importa las capas de atomic design en orden:
+   átomos → moléculas → organismos (+ movimiento)
+   ========================================================== */
+
+@import url('./atoms/tokens.css');
+@import url('./atoms/base.css');
+@import url('./atoms/buttons.css');
+
+@import url('./molecules/card.css');
+@import url('./molecules/social.css');
+@import url('./molecules/map.css');
+
+@import url('./organisms/header.css');
+@import url('./organisms/hero.css');
+@import url('./organisms/sections.css');
+@import url('./organisms/footer.css');
+@import url('./organisms/motion.css');
