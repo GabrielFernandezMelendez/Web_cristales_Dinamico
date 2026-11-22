@@ -1,0 +1,58 @@
+/* ==========================================================
+   MOLÉCULA: iconos de redes sociales
+   ========================================================== */
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--social-radius);
+  background: var(--social-bg);
+  border: var(--social-border);
+  color: #ffffff;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.social__link:hover {
+  transform: translateY(-2px);
+  background: var(--social-bg-hover);
+}
+
+.social__link svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Lista con check (ventajas, garantías) */
+.checklist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 14px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: 500;
+  color: var(--c-muted);
+}
+
+.checklist li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checklist svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--c-primary);
+}

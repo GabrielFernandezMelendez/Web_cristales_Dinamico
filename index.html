@@ -1,2 +1,224 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><title>Web_cristales_Dinamico</title></head><body><h1>Web_cristales_Dinamico</h1></body></html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cristales Tutorales · Tu cristal, cortado a medida</title>
+  <meta name="description" content="Venta de cristal al por mayor, cortes al milímetro y grosores de 3 a 19 mm en Gijón. Presupuesto sin compromiso.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== Cabecera ===== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#inicio">
+        <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><rect x="3" y="3" width="20" height="26" rx="6" fill="#F87462"/><rect x="13" y="8" width="20" height="26" rx="6" fill="#0C66E4" fill-opacity=".85" stroke="#ffffff" stroke-width="2"/></svg>
+        <span class="brand__name">Cristales Tutorales</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú" data-nav-toggle>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+
+      <nav class="nav" id="menu" aria-label="Principal" data-nav>
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#inicio">Inicio</a></li>
+          <li><a class="nav__link" href="#servicios">Qué ofrecemos</a></li>
+          <li><a class="nav__link" href="#mision">Nuestra misión</a></li>
+          <li><a class="nav__link" href="#ubicacion">Dónde encontrarnos</a></li>
+        </ul>
+        <a class="btn btn--accent btn--sm" href="#contacto">Pide presupuesto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="inicio">
+      <div class="container split">
+        <div class="hero__content" data-reveal>
+          <span class="hero__chip">Corte hoy · entrega mañana</span>
+          <h1>Tu cristal, cortado a medida y listo para montar</h1>
+          <p class="lead">Venta al por mayor, cortes al milímetro y grosores de 3 a 19 mm. Te asesoramos sin compromiso.</p>
+          <div class="hero__actions">
+            <a class="btn btn--light" href="#contacto">Solicitar presupuesto</a>
+            <a class="btn btn--outline" href="#servicios">Ver servicios →</a>
+          </div>
+        </div>
+
+        <div class="hero__stage" data-slider data-interval="5000">
+          <div class="hero__slider">
+            <img class="hero__slide is-active" data-slide src="./assets/img/hero-cristales.webp" alt="Láminas de cristal en fila con reflejos azules" width="1344" height="768">
+            <img class="hero__slide" data-slide src="./assets/img/grosores.webp" alt="Cantos pulidos de cristales de distintos grosores" width="1152" height="896" loading="lazy">
+            <img class="hero__slide" data-slide src="./assets/img/corte-medida.webp" alt="Mesa de corte marcando una línea sobre el cristal" width="1152" height="896" loading="lazy">
+          </div>
+          <div class="glass float-a hero__glass--a" aria-hidden="true"></div>
+          <div class="glass float-b hero__glass--b" aria-hidden="true"></div>
+          <div class="hero__dots">
+            <button class="hero__dot is-active" type="button" data-dot aria-label="Ver imagen 1"></button>
+            <button class="hero__dot" type="button" data-dot aria-label="Ver imagen 2"></button>
+            <button class="hero__dot" type="button" data-dot aria-label="Ver imagen 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Franja de tipos ===== -->
+    <section class="strip marquee" aria-label="Tipos de cristal">
+      <ul class="marquee__track">
+        <li>Templado</li><li class="strip__dot" aria-hidden="true">✦</li>
+        <li>Laminado</li><li class="strip__dot" aria-hidden="true">✦</li>
+        <li>Mate</li><li class="strip__dot" aria-hidden="true">✦</li>
+        <li>Espejo</li><li class="strip__dot" aria-hidden="true">✦</li>
+        <li>Seguridad</li><li class="strip__dot" aria-hidden="true">✦</li>
+        <li>Doble acristalamiento</li><li class="strip__dot" aria-hidden="true">✦</li>
+        <!-- Repetido para que el bucle no tenga corte -->
+        <li aria-hidden="true">Templado</li><li class="strip__dot" aria-hidden="true">✦</li>
+        <li aria-hidden="true">Laminado</li><li class="strip__dot" aria-hidden="true">✦</li>
+        <li aria-hidden="true">Mate</li><li class="strip__dot" aria-hidden="true">✦</li>
+        <li aria-hidden="true">Espejo</li><li class="strip__dot" aria-hidden="true">✦</li>
+        <li aria-hidden="true">Seguridad</li><li class="strip__dot" aria-hidden="true">✦</li>
+        <li aria-hidden="true">Doble acristalamiento</li><li class="strip__dot" aria-hidden="true">✦</li>
+      </ul>
+    </section>
+
+    <!-- ===== Qué ofrecemos ===== -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section__head section__head--row" data-reveal>
+          <h2>Todo el cristal que tu proyecto necesita</h2>
+          <p class="muted">Venta al por mayor para profesionales y piezas a medida para cualquier proyecto.</p>
+        </div>
+        <div class="grid">
+          <article class="card card--color card--blue tilt" data-reveal>
+            <img class="card__media" src="./assets/img/mayorista.webp" alt="Palés de cristal apilados en el almacén" width="1152" height="896" loading="lazy">
+            <div class="card__body">
+              <span class="chip chip--white">01</span>
+              <h3>Venta al por mayor</h3>
+              <p class="card__text">Suministro continuo para cristaleros, carpinterías y constructoras.</p>
+            </div>
+          </article>
+          <article class="card card--color card--coral tilt" data-reveal style="--reveal-delay: .12s">
+            <img class="card__media" src="./assets/img/corte-medida.webp" alt="Mesa de corte marcando una línea sobre el cristal" width="1152" height="896" loading="lazy">
+            <div class="card__body">
+              <span class="chip chip--ink">02</span>
+              <h3>Cortes a medida</h3>
+              <p class="card__text">Cortamos y pulimos cada pieza a la medida exacta que necesitas.</p>
+            </div>
+          </article>
+          <article class="card card--color card--sky tilt" data-reveal style="--reveal-delay: .24s">
+            <img class="card__media" src="./assets/img/grosores.webp" alt="Cantos pulidos de cristales de distintos grosores" width="1152" height="896" loading="lazy">
+            <div class="card__body">
+              <span class="chip chip--blue">03</span>
+              <h3>Diferentes grosores</h3>
+              <p class="card__text">De 3 a 19 mm: templado, laminado, mate y de seguridad.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Cifras ===== -->
+    <section class="stats" aria-label="Cristales Tutorales en cifras">
+      <div class="container grid">
+        <div><div class="stat__value" data-count="25" data-prefix="+">+25</div><div class="stat__label">años cortando cristal</div></div>
+        <div><div class="stat__value" data-count="48" data-suffix=" h">48 h</div><div class="stat__label">plazo de entrega</div></div>
+        <div><div class="stat__value" data-count="19" data-prefix="3–">3–19</div><div class="stat__label">milímetros de grosor</div></div>
+        <div><div class="stat__value" data-count="100" data-suffix="%">100%</div><div class="stat__label">cristal homologado</div></div>
+      </div>
+    </section>
+
+    <!-- ===== Nuestra misión ===== -->
+    <section class="section" id="mision">
+      <div class="container split">
+        <div class="mission__content" data-reveal>
+          <span class="chip chip--coral">Nuestra misión</span>
+          <h2>Transparencia en cada pieza</h2>
+          <p class="lead">Ofrecer cristal de calidad, cortado con precisión y entregado a tiempo, con un trato cercano y honesto.</p>
+          <div class="mission__chips">
+            <span class="chip chip--soft">Calidad</span>
+            <span class="chip chip--soft">Precisión</span>
+            <span class="chip chip--soft">Cercanía</span>
+          </div>
+        </div>
+        <div class="mission__stage" data-reveal style="--reveal-delay: .15s">
+          <img class="mission__photo" src="./assets/img/taller.webp" alt="Taller de cristalería luminoso con mesas de trabajo" width="1152" height="896" loading="lazy">
+          <div class="glass float-b mission__glass" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Dónde encontrarnos ===== -->
+    <section class="section location" id="ubicacion">
+      <div class="container split">
+        <div class="location__info" data-reveal>
+          <h2>Ven a vernos</h2>
+          <div class="info"><span class="info__label">Dirección</span><span class="info__value">C/ del Vidrio, 14 · Polígono de Roces<br>33211 Gijón, Asturias</span></div>
+          <div class="info"><span class="info__label">Horario</span><span class="info__value">L–V: 8:00–14:00 y 15:30–19:00 · S: 9:00–13:00</span></div>
+          <div class="info"><span class="info__label">Contacto</span><span class="info__value"><a href="tel:+34985000000">985 000 000</a> · <a href="mailto:hola@cristalestutorales.es">hola@cristalestutorales.es</a></span></div>
+          <a class="btn btn--accent" href="https://www.google.com/maps/search/?api=1&query=Pol%C3%ADgono+de+Roces+Gij%C3%B3n" target="_blank" rel="noopener">Cómo llegar →</a>
+        </div>
+        <div class="map" data-reveal style="--reveal-delay: .15s">
+          <iframe title="Mapa de Cristales Tutorales en el Polígono de Roces, Gijón" src="https://maps.google.com/maps?q=Pol%C3%ADgono%20de%20Roces%2C%20Gij%C3%B3n&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Llamada a la acción ===== -->
+    <section class="cta" id="contacto">
+      <div class="container cta__inner">
+        <h2>¿Tienes un proyecto? Hablemos hoy</h2>
+        <a class="btn btn--dark" href="mailto:hola@cristalestutorales.es?subject=Solicitud%20de%20presupuesto">Pedir presupuesto gratis</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <span class="footer__brand">Cristales Tutorales</span>
+          <span>Cristal al por mayor y a medida desde Gijón.</span>
+        </div>
+        <nav class="footer__col" aria-label="Enlaces del pie">
+          <span class="footer__title">Navegación</span>
+          <a href="#inicio">Inicio</a>
+          <a href="#servicios">Qué ofrecemos</a>
+          <a href="#mision">Nuestra misión</a>
+          <a href="#ubicacion">Dónde encontrarnos</a>
+        </nav>
+        <div class="footer__col">
+          <span class="footer__title">Contacto</span>
+          <span>C/ del Vidrio, 14 · Gijón</span>
+          <a href="tel:+34985000000">985 000 000</a>
+          <a href="mailto:hola@cristalestutorales.es">hola@cristalestutorales.es</a>
+        </div>
+        <div class="footer__col">
+          <span class="footer__title">Síguenos</span>
+          <div class="social">
+            <a class="social__link" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+            <a class="social__link" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h-3a4 4 0 0 0-4 4v3H6v4h2v7h4v-7h3l1-4h-4V7h3z"/></svg></a>
+            <a class="social__link" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="9" width="4" height="12"/><circle cx="5" cy="5" r="2"/><path d="M11 21v-7a4 4 0 0 1 8 0v7M11 9v12"/></svg></a>
+            <a class="social__link" href="https://wa.me/34985000000" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20l1.5-4A8 8 0 1 1 9 19z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Cristales Tutorales S.L.</span>
+        <div class="footer__legal">
+          <a href="#">Aviso legal</a>
+          <a href="#">Privacidad</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

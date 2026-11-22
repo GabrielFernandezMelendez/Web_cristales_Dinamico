@@ -1,0 +1,60 @@
+/* ==========================================================
+   MOLÉCULA: tarjeta
+   Imagen opcional + cuerpo con título y texto.
+   ========================================================== */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  background: var(--card-bg);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card__media {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 26px;
+}
+
+.card__text {
+  color: var(--c-muted);
+}
+
+/* Bloque "dato + etiqueta" (horario, dirección, cifras…) */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.info__label {
+  font-weight: 700;
+  color: var(--c-text);
+}
+
+.info__value {
+  color: var(--c-muted);
+}
+
+/* Cifra destacada */
+.stat__value {
+  font-family: var(--font-head);
+  font-size: 2rem;
+  font-weight: var(--head-weight);
+  line-height: 1.1;
+}
+
+.stat__label {
+  font-size: 0.9rem;
+  color: var(--c-muted);
+}

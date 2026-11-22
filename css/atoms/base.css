@@ -1,0 +1,144 @@
+/* ==========================================================
+   ÁTOMO: base
+   Reset mínimo, tipografía y utilidades de maquetación.
+   Todo tira de las variables definidas en tokens.css.
+   ========================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Deja hueco para la cabecera fija al saltar a un ancla */
+  scroll-padding-top: 88px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--c-text);
+  background: var(--c-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: var(--head-weight);
+  line-height: 1.12;
+  color: inherit;
+}
+
+h1 { font-size: clamp(2.3rem, 5vw, var(--h1-size)); }
+h2 { font-size: clamp(1.9rem, 3.6vw, var(--h2-size)); }
+h3 { font-size: 1.35rem; }
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--c-primary);
+}
+
+/* Contenedor central de todas las secciones */
+.container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: var(--section-space) 0;
+}
+
+.section--alt {
+  background: var(--c-surface);
+}
+
+.section__head {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 680px;
+  margin-bottom: 44px;
+}
+
+.section__head--center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  align-items: center;
+}
+
+/* Etiqueta pequeña sobre los títulos */
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: var(--eyebrow-tracking);
+  text-transform: uppercase;
+  color: var(--c-eyebrow);
+}
+
+.lead {
+  font-size: 1.12rem;
+  line-height: 1.7;
+  color: var(--c-muted);
+}
+
+.muted {
+  color: var(--c-muted);
+}
+
+/* Rejilla que se adapta sola al ancho disponible */
+.grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-min, 260px), 1fr));
+}
+
+.split {
+  display: grid;
+  gap: 56px;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Foco visible para navegación con teclado */
+:focus-visible {
+  outline: 3px solid var(--c-focus);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

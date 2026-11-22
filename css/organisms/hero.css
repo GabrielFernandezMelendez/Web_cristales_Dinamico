@@ -1,0 +1,167 @@
+/* ==========================================================
+   ORGANISMO: hero dinámico
+   Fondo noche con círculos de color, carrusel de fotos y
+   paneles de cristal flotando por encima.
+   ========================================================== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0 104px;
+  background: var(--c-ink);
+  color: #ffffff;
+}
+
+/* Círculos decorativos de fondo */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero::before {
+  right: -140px;
+  top: -140px;
+  width: 540px;
+  height: 540px;
+  background: var(--c-primary);
+}
+
+.hero::after {
+  right: 300px;
+  bottom: -170px;
+  width: 300px;
+  height: 300px;
+  background: var(--c-accent);
+  opacity: 0.9;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero__chip {
+  align-self: flex-start;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--c-ink-soft);
+  color: #B3D4FF;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.hero .lead {
+  color: #DEEBFF;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero__actions .btn--outline {
+  color: #ffffff;
+  border-color: #5E6C84;
+}
+
+/* Escenario de fotos + cristales */
+.hero__stage {
+  position: relative;
+  height: 480px;
+}
+
+.hero__slider {
+  position: absolute;
+  left: 4%;
+  top: 6%;
+  width: 86%;
+  height: 82%;
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 1s ease, transform 6s ease;
+}
+
+.hero__slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero__glass--a {
+  left: -2%;
+  top: 54%;
+  width: 34%;
+  height: 40%;
+}
+
+.hero__glass--b {
+  left: 72%;
+  top: 0;
+  width: 26%;
+  height: 34%;
+}
+
+.hero__dots {
+  position: absolute;
+  left: 4%;
+  bottom: -6px;
+  display: flex;
+  gap: 4px;
+}
+
+.hero__dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hero__dot::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #5E6C84;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.hero__dot.is-active::before {
+  width: 30px;
+  background: #ffffff;
+}
+
+@media (max-width: 700px) {
+  .hero__stage {
+    height: 340px;
+  }
+
+  .hero::before {
+    width: 340px;
+    height: 340px;
+  }
+}
